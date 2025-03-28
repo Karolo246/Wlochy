@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(tlo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+header {
+    width: 40%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    border-radius: 15px;
+    padding: 5px;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    height: 76vh;
+}
+main a {
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+}
+.slowo{
+    background-color: rgb(255, 255, 255);
+    padding: 12px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-weight: bold;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+main a img {
+    width: 90%;
+    height: 87%;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.8);
+    transition: 0.8s ease-in-out;
+}
+main a:hover img{
+    transform: scale(1.1);
+    filter: brightness(60%);     
+}
+main a:hover .slowo {
+    opacity: 1;
+  }
+footer {
+    background-color: #004d00;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+}
