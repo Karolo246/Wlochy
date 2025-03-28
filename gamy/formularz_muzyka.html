@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="formularz_style.css">
+    <script src="formularz_js.js"></script>
+</head>
+<body>
+    <form>
+        <center>
+        <header><h1 >Test na znajomosc instrumentow: </h1>
+        <h3>wybierz instrument ktory slyszysz w granych fragmentach/utowrach.</h3>
+        </header>
+        </center>
+        <main>
+            <section id="nr1">
+            <h2>ODSŁUCH PIERWSZY</h2>
+            <audio class="audio" controls> 
+                <source src="Bolero Trombone Solo.ogg" type="audio/ogg">
+                <source src="Bolero Trombone Solo.mp3" type="audio/mpeg"> 
+            </audio><br><br>
+            <label for="waltornia"><input type="radio" id="waltornia" name="a" > Waltornia </label><br><br>
+            <label for="puzon"><input type="radio" id="puzon" name="a"> Puzon </label><br><br>
+            <label for="trabka"><input type="radio" id="trabka" name="a"> Trąbka </label><br><br>
+            <label for="rozek"><input type="radio" id="rozek" name="a"> Rożek angielski </label><br><br>
+            <input type="button" value="zatwierdz" onclick="nr1()"><br>
+            <div id="nr11"></div>
+            </section>
+
+            <section id="nr2">
+            <h2>ODSŁUCH DRUGI</h2>
+            <audio class="audio" controls> 
+                <source src="flet.ogg" type="audio/ogg">
+                <source src="flet.mp3" type="audio/mpeg"> 
+            </audio><br><br>
+            <label for="klarnet"><input type="radio" id="klarnet" name="b"> Klarnet </label><br><br>
+            <label for="oboj"><input type="radio" id="oboj" name="b"> Obój </label><br><br>
+            <label for="flet"><input type="radio" id="flet" name="b"> Flet </label><br><br>
+            <label for="fagot"><input type="radio" id="fagot" name="b"> Fagot </label><br><br>
+            <input type="button" value="zatwierdz" onclick="nr2()"><br>
+            <div id="nr22"></div>
+            </section>
+
+            <section id="nr3">
+            <h2>ODSŁUCH TRZECI</h2>
+            <audio class="audio" controls> 
+                <source src="altowka.ogg" type="audio/ogg">
+                <source src="altowka.mp3" type="audio/mpeg"> 
+            </audio><br><br>
+            <label for="skrzypce"><input type="radio" id="skrzypce" name="c"> skrzypce </label><br><br>
+            <label for="wiolonczela"><input type="radio" id="wiolonczela" name="c"> wiolonczela </label><br><br>
+            <label for="altowka"><input type="radio" id="altowka" name="c"> altowka </label><br><br>
+            <label for="kontrabas"><input type="radio" id="kontrabas" name="c"> kontrabas </label><br><br>
+            <input type="button" value="zatwierdz" onclick="nr3()"><br>
+            <div id="nr33"></div>
+            </section>
+
+            <section id="nr4">
+            <h2>ODSŁUCH CZWARTY</h2>
+            <audio class="audio" controls> 
+                <source src="klawesyn.ogg" type="audio/ogg">
+                <source src="klawesyn.mp3" type="audio/mpeg"> 
+            </audio><br><br>
+            <label for="klawesyn"><input type="radio" id="klawesyn" name="d"> klawesyn </label><br><br>
+            <label for="lutnia"><input type="radio" id="lutnia" name="d"> lutnia </label><br><br>
+            <label for="akordeon"><input type="radio" id="akordeon" name="d"> akordeon </label><br><br>
+            <label for="cymbaly"><input type="radio" id="cymbaly" name="d"> cymbały </label><br><br>
+            <input type="button" value="zatwierdz" onclick="nr4()"><br>
+            <div id="nr44"></div>
+            </section>
+
+            <section id="nr5">
+            <h2>ODSŁUCH PIĄTY</h2>
+            <audio class="audio" controls> 
+                <source src="oboj.ogg" type="audio/ogg">
+                <source src="oboj.mp3" type="audio/mpeg"> 
+            </audio><br><br>
+            <label for="flet1"><input type="radio" id="flet1" name="e"> flet </label><br><br>
+            <label for="saxofon"><input type="radio" id="saxofon" name="e"> saxophone </label><br><br>
+            <label for="klarnet1"><input type="radio" id="klarnet1" name="e"> klarnet </label><br><br>
+            <label for="oboj1"><input type="radio" id="oboj1" name="e"> oboj </label><br><br>
+            <input type="button" value="zatwierdz" onclick="nr5()"><br>
+            <div id="nr55"></div>
+            </section>
+
+            <section id="nr6">
+            <h2>ODSŁUCH SZÓSTY</h2>
+            <audio class="audio" controls> 
+                <source src="saxophone.ogg" type="audio/ogg">
+                <source src="saxophone.mp3" type="audio/mpeg"> 
+            </audio><br><br>
+            <label for="klarnet2"><input type="radio" id="klarnet2" name="f"> Klarnet </label><br><br>
+            <label for="oboj2"><input type="radio" id="oboj2" name="f"> Obój </label><br><br>
+            <label for="saxofon1"><input type="radio" id="saxofon1" name="f"> saxophone </label><br><br>
+            <label for="flet2"><input type="radio" id="flet2" name="f"> flet </label><br><br>
+            <input type="button" value="zatwierdz" onclick="nr6()"><br>
+            <div id="nr66"></div>
+            </section>
+
+            <section id="nr7">
+            <h2>ODSŁUCH SIÓDMY</h2>
+            <audio class="audio" controls> 
+                <source src="waltornia.ogg" type="audio/ogg">
+                <source src="waltornia.mp3" type="audio/mpeg"> 
+            </audio><br><br>
+            <label for="trabka1"><input type="radio" id="trabka1" name="g"> Trąbka </label><br><br>
+            <label for="puzon2"><input type="radio" id="puzon2" name="g"> puzon </label><br><br>
+            <label for="tuba"><input type="radio" id="tuba" name="g"> tuba </label><br><br>
+            <label for="waltornia1"><input type="radio" id="waltornia1" name="g"> waltornia </label><br><br>
+            <input type="button" value="zatwierdz" onclick="nr7()"><br>
+            <div id="nr77"></div>
+            </section>
+
+            <section id="nr8">
+            <h2>ODSŁUCH ÓSMY</h2>
+            <audio class="audio" controls> 
+                <source src="puzon.ogg" type="audio/ogg">
+                <source src="puzon.mp3" type="audio/mpeg"> 
+            </audio><br><br>
+            <label for="puzon3"><input type="radio" id="puzon3" name="h"> puzon </label><br><br>
+            <label for="waltornia2"><input type="radio" id="waltornia2" name="h"> waltornia </label><br><br>
+            <label for="tuba1"><input type="radio" id="tuba1" name="h"> tuba </label><br><br>
+            <label for="trabka2"><input type="radio" id="trabka2" name="h"> waltornia </label><br><br>
+            <input type="button" value="zatwierdz" onclick="nr8()"><br>
+            <div id="nr88"></div>
+            </section>
+
+            <section id="nr9">
+            <h2>ODSŁUCH DZIEWIĄTY</h2>
+            <audio class="audio" controls> 
+                <source src="skrzypce.ogg" type="audio/ogg">
+                <source src="skrzypce.mp3" type="audio/mpeg"> 
+            </audio><br><br>
+            <label for="skrzypce1"><input type="radio" id="skrzypce1" name="i"> skrzypce </label><br><br>
+            <label for="wiolonczela2"><input type="radio" id="wiolonczela2" name="i"> wiolonczela </label><br><br>
+            <label for="altowka2"><input type="radio" id="altowka2" name="i"> altowka </label><br><br>
+            <label for="kontrabas2"><input type="radio" id="kontrabas2" name="i"> kontrabas </label><br><br>
+            <input type="button" value="zatwierdz" onclick="nr9()"><br>
+            <div id="nr99"></div>
+            </section>
+
+            <section id="nr10">
+            <h2>ODSŁUCH DZISIĄTY</h2>
+            <audio class="audio" controls> 
+                <source src="tuba.ogg" type="audio/ogg">
+                <source src="tuba.mp3" type="audio/mpeg"> 
+            </audio><br><br>
+            <label for="fagot3"><input type="radio" id="fagot3" name="j"> fagot </label><br><br>
+            <label for="waltornia3"><input type="radio" id="waltornia3" name="j"> waltornia </label><br><br>
+            <label for="tuba2"><input type="radio" id="tuba2" name="j"> tuba </label><br><br>
+            <label for="puzon4"><input type="radio" id="puzon4" name="j"> puzon  </label><br><br>
+            <input type="button" value="zatwierdz" onclick="nr10()"><br>
+            <div id="nr111"></div>
+            </section>
+        </main>
+    </form>
+
+</body>
+</html>

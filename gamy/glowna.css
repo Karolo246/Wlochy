@@ -1,0 +1,152 @@
+body{
+    background-color: rgb(245, 232, 216);
+    overflow-x: hidden;
+}
+
+
+.circle{
+    margin: 2%;
+    width: 10%;
+    height: 250px;
+    border-radius: 50%;
+    border: 10px solid  rgb(0, 8, 83);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#klucz{
+
+    width: 100px;
+    height: 200px;
+}
+header{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+}
+#napis{
+    color:  rgb(0, 8, 83);
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#czas{
+    font-size: 50px;
+    width: 35%;
+    color: rgb(0, 8, 83);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50px;
+
+    border: 5px solid  rgb(0, 8, 83);
+}
+
+nav{
+    height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#test{
+    color: aliceblue;
+    background-color: rgb(0, 183, 255);
+    width: 33%;
+    height: 100px;
+    border: 5px solid  rgb(0, 8, 83);
+    border-radius: 30px;
+    font-weight: bold; 
+    text-align: center; 
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#kolo{
+    color: aliceblue;
+    background-color: rgb(0, 8, 83);
+    width: 38%;
+    height: 100px;
+    border: 5px solid black;
+    border-radius: 30px;
+    font-weight: bold; 
+    text-align: center; 
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#home{
+    color: aliceblue;
+    background-color: rgb(255, 0, 0);
+    width: 28%;
+    height: 100px;
+    border: 5px solid  rgb(0, 8, 83);
+    border-radius: 30px;
+    font-weight: bold; 
+    text-align: center; 
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+}
+#grajek{
+    width: 95%;
+    height: 500px;
+}
+#home1{
+    height: 500px;
+    width: 28%;
+}
+#kwintowe{
+    height: 350px;
+    width: 50%;
+    border: 10px solid rgb(0, 8, 83);
+    border-radius:  30px;
+}
+#kwintowe:hover{
+    background-color: rgb(216, 209, 198);
+
+}
+#kolo1{
+    width: 38%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#test1{
+    width: 34%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#test2{
+    padding: 5%;
+    height: 315px;
+    width: 45%;
+    border: 10px solid rgb(0, 8, 83);
+    border-radius:  30px;
+}
+#test2:hover{
+    background-color: rgb(216, 209, 198);
+
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(0, 8, 83);
+}
