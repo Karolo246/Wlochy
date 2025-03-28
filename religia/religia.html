@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Religia Wloch</title>
+    <link rel="stylesheet" href="rel.css">
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+        function wyskakiwanie() {
+            var content = document.getElementById("main");
+            var button = document.getElementById("przycisk");
+
+            content.classList.add("show");
+            button.classList.add("hidden");
+        }
+        $(function(){
+    
+            $('tr:even').css('background','#B0B0B0');
+            $('tr:odd').css('background','#EEE');
+        })
+    </script>
+</head>
+<body>
+    <header>
+        RELIGIA WE WŁOSZECH
+    </header>
+    <center><button id="przycisk" onclick="wyskakiwanie()">Pokaż informacje</button></center>
+    <main id="main">
+        <section id="religie">
+            <h1 style="font-size: 72px;" >Religie/Kościoły</h1>
+            <hr style="width:1090px;height: 10px; background-color: black; border-radius: 5px; margin-bottom: 35px;">
+            <table>
+                <tr>
+                    <th>Religie/koscioły</th>
+                    <th>Liczba wiernych</th>
+                    <th>Procent ludności</th>
+                </tr>
+                <tr>
+                    <td>Kościół rzymskokatolicki &nbsp;&nbsp;&nbsp;</td>
+                    <td>39 661 400</td>
+                    <td>71,1%</td>
+                </tr>
+                <tr>
+                    <td>Islam</td>
+                    <td>1 008 900</td>
+                    <td>3,32%</td>
+                </tr>
+                <tr>
+                    <td>Prawosławni</td>
+                    <td>1 777 200</td>
+                    <td>2,94%</td>
+                </tr>
+                <tr>
+                    <td>Protestanci</td>
+                    <td>688 100</td>
+                    <td>1,14%</td>
+                </tr>
+                <tr>
+                    <td>Buddyści</td>
+                    <td>292 900</td>
+                    <td>0,48%</td>
+                </tr>
+                <tr>
+                    <td>Świadkowie Jehowy</td>
+                    <td>250 624</td>
+                    <td>0,41%</td>
+                </tr>
+                <tr>
+                    <td>Hinduiści</td>
+                    <td>192 500</td>
+                    <td>0,32%</td>
+                </tr>
+            </table>
+            <p>źródło: wikipedia</p>
+        </section>
+        <hr style="width:1090px;height: 10px; background-color: black; border-radius: 5px; margin-top: 35px;">
+        <section id="koscioly">
+            <h1 style="font-size: 72px;" >Budynki Religijne</h1>
+            <hr style="width:1090px;height: 10px; background-color: black; border-radius: 5px; margin-bottom: 35px;">
+
+            <section class="budynki">
+            <img src="swpiotr.jpg" alt="bazylika" width="500px" height="320px">
+            <p><b>Bazylika św. Piotra w Watykanie </b>rzymskokatolicka bazylika na Wzgórzu Watykańskim, zbudowana w latach 1506–1626, na miejscu starszej bazyliki wczesnochrześcijańskiej, fundacji cesarza Konstantyna Wielkiego, jedna z czterech bazylik większych Rzymu oraz jedna z wielu bazylik papieskich (dawniej patriarchalnych), sanktuarium, jeden z najważniejszych ośrodków pielgrzymkowych.</p>
+            </section>
+
+            <section class="budynki">
+                <p><b>Bazylika Świętego Franciszka</b> XIII-wieczny kościół poświęcony św. Franciszkowi z Asyżu, znajdujący się w umbryjskim mieście Asyż. Bazylika została zbudowana na Wzgórzu Piekielnym, podarowanym zakonowi przez mieszkańca Asyżu, Szymona Pucciarellego. Reguła zakonu nie pozwala na posiadanie dóbr, zatem teren ten już od 1228 stanowił własność Stolicy Apostolskiej. Dzień po kanonizacji św. Franciszka, w dniu 17 lipca 1228, papież Grzegorz IX poświęcił miejsce budowy i zmienił nazwę wzgórza na Wzgórze Rajskie.</p>
+                <img src="asyz.jpg" alt="asyz" width="500px" height="320px">
+            </section>
+            <section class="budynki">
+                <img src="sanktuarium.jpg" alt="sanktuarium" width="500px" height="320px">
+                <p><b>Sanktuarium Matki Bożej Różańcowej w Pompejach </b>to jedno z najważniejszych sanktuariów maryjnych we Włoszech. Zostało założone w XIX wieku przez bł. Bartolo Longo, byłego ateistę, który po nawróceniu szerzył kult Różańca Świętego. Świątynia słynie z cudownego obrazu Matki Bożej Pompejańskiej, przed którym wierni odmawiają Nowennę Pompejańską. Jest to ważne miejsce pielgrzymkowe, odwiedzane przez tysiące wiernych każdego roku.</p>
+            </section>
+            <section class="budynki">
+                <p><b>Katedra Metropolitalna Św. Jana Chrzciciela w Turynie </b>(wł. Duomo di Torino) – najważniejszy kościół katolicki Turynu. Znana z przechowywanego w jej bocznej kaplicy Całunu Turyńskiego. Powstała w latach 1491–1498, prawdopodobnie jako dzieło Meo del Caprina. Kaplica Całunu została dobudowana w latach 1668–1694.</p>
+                <img src="turynska.webp" alt="Katedra" width="500px" height="320px">
+            </section>
+            <section class="budynki">
+                <img src="loreto.jpg" alt="loreto" width="500px" height="320px">
+                <p><b>Papieskie Sanktuarium Santa Casa z Loreto </b>(wł. Santa Casa di Loreto) – rzymskokatolickie sanktuarium Świętego Domku we włoskim Loreto. Sanktuarium Domu Świętego składa się z XV-wiecznej bazyliki oraz ze starożytnego Santa Casa. Na całym świecie znajdują się kopie Świętego Domku, wokół których tworzone są sanktuaria nazywa się je domkami loretańskimi. Pod koniec XIX wieku spowiednikami w Loreto byli franciszkanie Leon Noras i Franciszek Kurpas, a sanktuarium określano wówczas mianem „włoskiej Częstochowy”.</p>
+            </section>
+            <section class="budynki">
+                <p><b>Papieska bazylika św. Antoniego w Padwie </b>(it. Basilica Pontificia di Sant’Antonio di Padova) – największy kościół w Padwie. Wewnątrz znajduje się grób św. Antoniego Padewskiego (Antoniego z Padwy). Mimo licznych pielgrzymek wiernych z całego świata bazylika ta nie posiada statusu głównego kościoła w mieście. Przez mieszkańców Padwy bazylika nazywana jest „II Santo” (wł. święty).</p>
+                <img src="padwa.jpg" alt="padwa" width="500px" height="320px">
+            </section>
+            <section class="budynki">
+                <img src="sanktuarium_michal.jpg" alt="sanktuarium" width="500px" height="320px">
+                <p><b>Sanktuarium św. Michała Archanioła w Monte Sant’Angelo </b>– rzymskokatolickie sanktuarium w Monte Sant’Angelo, w prowincji Foggia, w regionie Apulia we Włoszech, wpisane na listę światowego dziedzictwa UNESCO. Król Karol I Andegaweński ufundował obecną nawę oraz dzwonnicę. Od 1996 roku sanktuarium opiekują się polscy księża ze zgromadzenia św. Michała Archanioła, potocznie zwani michalitami.</p>
+            </section>
+        </section>
+    </main>
+
+</body>
+</html>
