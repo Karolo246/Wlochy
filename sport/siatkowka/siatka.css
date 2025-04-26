@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+header {
+    background: #0073e6;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+    margin: 20px;
+}
+nav a {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin: 0 15px;
+    background-color: #0073e6;
+    border-radius: 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: #1b8dff;
+}
+main{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    margin: auto;
+    align-items: center;
+}
+#historia{
+    border: 2px solid rgb(182, 181, 181);
+    width: 60%;
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+#kluby2{
+    display: flex;
+    flex-wrap:nowrap;
+    justify-content: space-around;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #0073e6;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.kluby1{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin: 15px;   
+}
+.kluby{
+    border: 2px solid rgb(182, 181, 181);
+    width: 60%;
+    padding: 20px;
+    background: #fff;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.kluby h3{
+
+    background: #c6d2f2;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.kluby h3:hover{
+    background-color: #0073e6;
+}
+.kluby h3.aktywny{
+    background-color: #0073e6;
+}
+.kluby p{
+    background-color: #e1e6f4;
+    margin: 10px;
+
+    padding: 15px;
+    display: none;
+}
+#reprezentacja{
+    border: 2px solid rgb(182, 181, 181);
+    width: 60%;
+    padding: 20px;
+    background: #fff;
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+
+}
+#reprezentacja1{
+    margin-left: 75px;
+}

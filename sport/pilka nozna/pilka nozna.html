@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piłka Nożna we Włoszech</title>
+    <link rel="stylesheet" href="pilka.css">
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+
+$(function() {
+    $(".kluby h3").click(function() {
+        if (!$(this).hasClass("aktywny")) {
+            $(".kluby p:visible").slideUp("slow").removeClass("aktywny");
+            $(this).next("p").slideDown("slow").addClass("aktywny");
+            $(".kluby h3").removeClass("aktywny"); 
+            $(this).addClass("aktywny"); 
+        } else {
+            $(this).next("p").slideUp("slow").removeClass("aktywny");
+            $(this).removeClass("aktywny");
+        }
+    });
+});
+    </script>
+</head>
+
+<body>
+<header>
+    <h1>Piłka nożna we Włoszech</h1>
+</header>
+<nav>
+    <a href="../sport.html">Powrót</a>
+</nav>
+<main>
+<section id="historia">
+    <h2>Historia</h2>
+    <p>Piłka nożna we Włoszech ma długą i bogatą historię, sięgającą końca XIX wieku.Włochy są jednym z najbardziej utytułowanych krajów w historii futbolu. 
+    <br>Mają również wiele klubów klasy światowej wyrgywające różne turnieje. <br>
+    Więcej informacji znajdziesz <a href="https://pl.wikipedia.org/wiki/Pi%C5%82ka_no%C5%BCna_we_W%C5%82oszech" target="_blank">tutaj!</a> </p>
+</section>
+
+<section class="kluby">
+    <h2 style="text-align: center;">Najpopularniejsze kluby</h2>
+    <section id="kluby2">
+        <section class="kluby1">
+            <img src="acmilan.png" alt="ac milan">
+            <h3>AC Milan</h3>
+            <p> 
+                <b>Osiągniecia: </b>3x Champions League | 4x European Cup | 1x FIFA Club World Cup | 19x Italian Champion | 5x UEFA Supercup | 5x Italian Cup | 8x Italian Supercup | 3x Intercontinental Cup <br>
+                <b>Data założenia: </b>16.12.1899 <br>
+                <b>Stadion: </b>Giuseppe Meazza (San Siro) <br>
+                <b>Prezydent: </b>Paolo Scaroni <br>
+                <b>Trener: </b>Sérgio Conceição
+            </p>
+        </section>
+        <section class="kluby1">
+            <img src="juventus.png" alt="juventus">
+            <h3>Juventus</h3>
+            <p> 
+                <b>Osiągniecia: </b>1x Champions League | 1x European Cup | 36x Italian Champion | 2x UEFA Supercup | 3x UEFA Cup | 15x Italian Cup | 9x Italian Supercup | 2x Intercontinental Cup<br>
+                <b>Data założenia: </b>1 lis 1897 <br>
+                <b>Stadion: </b>Allianz Stadium <br>
+                <b>Prezydent: </b>Gianluca Ferrero <br>
+                <b>Trener: </b>Igor Tudor
+            </p>
+        </section>
+        <section class="kluby1">
+            <img src="napoli.png" alt="napoli">
+            <h3>Napoli</h3>
+            <p>
+                <b>Osiągniecia: </b>3x Italian Champion | 1x UEFA Cup | 6x Italian Cup | 2x Italian Supercup<br>
+                <b>Data założenia: </b>1 sie 1926 <br>
+                <b>Stadion: </b>Diego Armando Maradona<br>
+                <b>Prezydent: </b>Aurelio de Laurentiis <br>
+                <b>Trener: </b>Antonio Conte
+            </p>
+        </section>
+        <section class="kluby1">
+            <img src="asroma.png" alt="as roma">
+            <h3>AS Roma</h3>
+            <p>
+                <b>Osiągniecia: </b>3x Italian Champion | 1x Conference League | 9x Italian Cup | 2x Italian Supercup<br>
+                <b>Data założenia: </b>7 cze 1927<br>
+                <b>Stadion: </b>Olimpico di Roma<br>
+                <b>Prezydent: </b>Dan Friedkin <br>
+                <b>Trener: </b>Claudio Ranieri
+            </p>
+        </section>
+        <section class="kluby1">
+            <img src="inter.png" alt="inter mediolan">
+            <h3>Inter Mediolan</h3>
+            <p>
+                <b>Osiągniecia: </b>1x Champions League | 2x European Cup | 1x FIFA Club World Cup | 20x Italian Champion | 3x UEFA Cup | 9x Italian Cup | 8x Italian Supercup | 2x Intercontinental Cup <br>
+                <b>Data założenia: </b>9 mar 1908<br>
+                <b>Stadion: </b>Giuseppe Meazza<br>
+                <b>Prezydent: </b>Giuseppe Marotta<br>
+                <b>Trener: </b>Simone Inzaghi
+            </p>
+        </section>
+    </section>
+</section>
+
+<section id="reprezentacja">
+    <h2 style="text-align: center;">Reprezentacja Włoch</h2>
+    <h3>Dane główne</h3>
+    <ul>
+        <li>Data założenia: 15 mar 1898</li><br>
+        <li>Prezydent zarządu: Gabriele Gravina</li><br>
+        <li>Trener kadry: Luciano Spalletti</li><br>
+    </ul>
+    <h3>Historia</h3>
+    <ul>
+        <li>Pierwszy mecz: 1910 roku przeciwko Francji (wygrana 6:2).</li><br>
+        <li>Przydomek: "Gli Azzurri", czyli "Błękitni" – od koloru koszulek, który pochodzi od dynastii sabaudzkiej (królewskiej).</li><br>
+        <li>Zarządzana przez Federazione Italiana Giuoco Calcio (FIGC).</li><br>
+    </ul>
+    <h3>Największe sukcesy</h3>
+    <ul>
+        <li>Mistrzostwa Świata: zwycięzcy czterokrotnie</li><br>
+        <li>Mistrzostwa Europy: zwycięzcy dwukrotnie</li><br>
+    </ul>
+    <h3>Legendarni piłkarze</h3>
+    <ul>
+        <li>Paolo Maldini – legenda defensywy.</li><br>
+        <li>Dino Zoff – bramkarz, mistrz świata z 1982 r., grał na mundialu w wieku 40 lat!</li><br>
+        <li>Francesco Totti, Alessandro Del Piero, Andrea Pirlo, Gianluigi Buffon – ikony współczesnej historii.</li><br>
+    </ul>
+    <h3></h3>
+</section>
+
+</main>
+<footer>
+    <p>&copy; 2025 Piłka Nożna we Włoszech</p>
+</footer>
+
+</body>
+</html>

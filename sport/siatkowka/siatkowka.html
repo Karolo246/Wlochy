@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piłka siatkowa we Włoszech</title>
+    <link rel="stylesheet" href="siatka.css">
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+
+$(function() {
+    $(".kluby h3").click(function() {
+        if (!$(this).hasClass("aktywny")) {
+            $(".kluby p:visible").slideUp("slow").removeClass("aktywny");
+            $(this).next("p").slideDown("slow").addClass("aktywny");
+            $(".kluby h3").removeClass("aktywny"); 
+            $(this).addClass("aktywny"); 
+        } else {
+            $(this).next("p").slideUp("slow").removeClass("aktywny");
+            $(this).removeClass("aktywny");
+        }
+    });
+});
+    </script>
+</head>
+
+<body>
+<header>
+    <h1>Piłka siatkowa we Włoszech</h1>
+</header>
+<nav>
+    <a href="../sport.html">Powrót</a>
+</nav>
+<main>
+<section id="historia">
+    <h2>Wstęp</h2>
+    <p>Siatkówka pojawiła się we Włoszech po zakończeniu I wojny światowej. <br>
+    W 1929 roku powstała Federazione Italiana Palla a Volo (FIPV). <br>
+    W latach 30. XX wieku stowarzyszenia faszystowskie organizowały turnieje siatkówki. <br><br>
+    Siatkówka to jeden z najpopularniejszych sportów we Włoszech, zaraz po piłce nożnej.Ma bardzo silne tradycje i sukcesy zarówno wśród mężczyzn, jak i kobiet.<br>Szczególnie popularna jest na północy kraju – w regionach takich jak Emilia-Romania, Lombardia, Piemont i Veneto.</p>
+</section>
+
+<section class="kluby">
+    <h2 style="text-align: center;">Najpopularniejsze kluby</h2>
+    <section id="kluby2">
+        <section class="kluby1">
+            <img src="sir.png" alt="sir safety perugia">
+            <h3>Sir safety perugia</h3>
+            <p> 
+                <b>Osiągniecia: </b>2x Mistrzostwo Włoch | 6x Superpuchar Włoch | 4x Puchar Włoch | 2x Klubowe Mistrzostwa Świata<br>
+                <b>Data założenia: </b>2001<br>
+                <b>Hala sportowa: </b>PalaEvangelisti, Perugia <br>
+                <b>Prezes: </b>Gino Sirci <br>
+                <b>Trener: </b>Angelo Lorenzetti
+            </p>
+        </section>
+        <section class="kluby1">
+            <img src="tentino.jpg" alt="trentino volley">
+            <h3>Trentino Volley</h3>
+            <p> 
+                <b>Osiągniecia: </b>5x Mistrzostwo Włoch | 3x Puchar Włoch | 3x Superpuchar Włoch | 4x Liga Mistrzów | 5x Klubowe Mistrzostwa Świata<br>
+                <b>Data założenia: </b>2000<br>
+                <b>Hala sportowa: </b>Arena Trento<br>
+                <b>Prezes: </b>Diego Mosna<br>
+                <b>Trener: </b>Fabio Soli
+            </p>
+        </section>
+        <section class="kluby1">
+            <img src="piacenza.png" alt="Gas Sales Piacenza">
+            <h3>Gas Sales Piacenza</h3>
+            <p>
+                <b>Osiągniecia: </b>1x Puchar Włoch<br>
+                <b>Data założenia: </b>2018<br>
+                <b>Hala sportowa: </b>Pala Banca<br>
+                <b>Prezes: </b>Elisabetta Curti<br>
+                <b>Trener: </b>Ljubomir Travica
+            </p>
+        </section>
+        <section class="kluby1">
+            <img src="modena.png" alt="Azimut Modena">
+            <h3>Azimut Modena</h3>
+            <p>
+                <b>Osiągniecia: </b>12x Mistrzostwo Włoch | 12x Puchar Włoch | 4x Superpuchar Włoch | 4x Klubowe Mistrzostwa Europy<br>
+                <b>Data założenia: </b>1966<br>
+                <b>Hala sportowa: </b>PalaSport G.Panini – PalaCasaModena, Modena<br>
+                <b>Prezes: </b>Giulia Gabana<br>
+                <b>Trener: </b>Alberto Giuliani
+            </p>
+        </section>
+        <section class="kluby1">
+            <img src="lube.png" alt="Cucine Lube Civitanova">
+            <h3>Cucine Lube Civitanova</h3>
+            <p>
+                <b>Osiągniecia: </b>3x Puchar CEV |  8x Puchar Włoch | 2x Liga Mistrzów | 7x Mistrzostwo Włoch | 4x Superpuchar Włoch | 1x Klubowe Mistrzostwa Świata<br>
+                <b>Data założenia: </b>1990<br>
+                <b>Hala sportowa: </b>PalaCivitanova, Civitanova Marche<br>
+                <b>Prezes: </b>Simona Sileoni<br>
+                <b>Trener: </b>Giampaolo Medei
+            </p>
+        </section>
+    </section>
+</section>
+
+<section id="reprezentacja">
+
+    <h2 style="text-align: center;">Reprezentacja Włoch</h2>
+    <section id="reprezentacja1">
+    <h3>Dane główne</h3>
+    <ul>
+        <li>Data założenia: 1946 rok</li><br>
+        <li>Prezydent zarządu: Giiuseppe Manfredi</li><br>
+        <li>Trener kadry męskiej: Ferdinando "Fefe" De Giorgi</li><br>
+        <li>Trener kadry żeńskiej: Federico "Ciccio" Bellano</li><br>
+    </ul>
+    <h3>Mężczyźni</h3>
+    <h4>Największe sukcesy</h4>
+    <ul>
+        <li>Mistrzostwa Świata: zwycięzcy czterokrotnie</li><br>
+        <li>Mistrzostwa Europy: zwycięzcy sześciokrotnie</li><br>
+        <li>Liga Narodów: zwycięzcy raz</li><br>
+    </ul>
+    <h4>Legendarni siatkarze</h4>
+    <ul>
+        <li>Andrea Giani</li><br>
+        <li>Samuele Papi</li><br>
+        <li>Lorenzo Bernardi</li><br>
+        <li>Ivan Zaytsev</li><br>
+        <li>Osmany Juantorena</li><br>
+    </ul>
+    <h3>Kobiety</h3>
+    <h4>Największe sukcesy</h4>
+    <ul>
+        <li>Mistrzostwa Świata: zwycięzcy raz</li><br>
+        <li>Mistrzostwa Europy: zwycięzcy trzykrotnie</li><br>
+        <li>Liga Narodów: zwycięzcy raz</li><br>
+    </ul>
+    <h4>Legendarne siatkarki</h4>
+    <ul>
+        <li>Paola Egonu</li><br>
+        <li>Miriam Sylla</li><br>
+        <li>Monica De Gennaro</li><br>
+        <li>Francesca Piccinini</li>
+    </ul>
+    </section>
+</section>
+
+</main>
+<footer>
+    <p>&copy; 2025 Piłka Nożna we Włoszech</p>
+</footer>
+
+</body>
+</html>

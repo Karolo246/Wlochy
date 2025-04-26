@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="rel.css">
     <script src="jquery-3.7.1.js"></script>
     <script>
-        function wyskakiwanie() {
-            var content = document.getElementById("main");
-            var button = document.getElementById("przycisk");
 
-            content.classList.add("show");
-            button.classList.add("hidden");
-        }
+function wyskakiwanie() {
+    document.body.style.overflow = "auto";
+    document.getElementById("main").classList.add("show");
+    document.getElementById("przycisk").classList.add("hidden");
+
+}
         $(function(){
     
             $('tr:even').css('background','#B0B0B0');
@@ -25,7 +25,14 @@
     <header>
         RELIGIA WE WŁOSZECH
     </header>
-    <center><button id="przycisk" onclick="wyskakiwanie()">Pokaż informacje</button></center>
+    <nav>
+    <center>
+    <button><a href="../index.html">Powrót</a></button>
+    </center>
+    </nav>
+    <center>
+        <button id="przycisk" onclick="wyskakiwanie()">Pokaż informacje</button>
+    </center>
     <main id="main">
         <section id="religie">
             <h1 style="font-size: 72px;" >Religie/Kościoły</h1>

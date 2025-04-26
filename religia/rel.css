@@ -3,8 +3,9 @@ body{
     margin: 0;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    
+    background-attachment:  fixed;
+
+
 }
 header {
     width: 40%;
@@ -19,6 +20,10 @@ header {
     margin: 15% auto;
     border-radius: 15px;
     padding: 5px;
+}
+nav a{
+    color: #000;
+    text-decoration: none;
 }
 main{
     background-color: aliceblue;
@@ -36,11 +41,12 @@ main{
 
 main.show {
     transform: translateY(0);
+    
     opacity: 1;
     padding: 20px;
 }
 button {
-
+    margin: 10px;
     padding: 10px 20px;
     border: none;
     background-color: aliceblue;
