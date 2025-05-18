@@ -1,0 +1,55 @@
+body{
+    background-image: url(tlo.png);
+    background-position: absolute;
+    
+}
+main{
+    margin: auto;
+    background-color: beige;
+    width: 100vh;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    border: 8px solid #078310;
+    border-radius: 30px;
+}
+
+.info{
+    margin: 30px;
+    font-size: large;
+}
+
+h1{
+    text-align: center;
+    font-size: 75px;
+    font-family: "Playfair Display", serif;
+}
+.powrot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    width: 300px;
+    font-size: 20px;
+    margin: 30px;
+    border: 5px solid #02f939;
+      background-color: #870897;
+    color: #02f939;
+      padding: 1em 2em;
+      transform: skew(-20deg);
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+button span {
+      display: inline-block;
+      transform: skew(20deg); 
+    }
+
+button:hover {
+    background-color: #02f939;
+    border: 5px solid #870897;
+    color: #870897;
+    }
