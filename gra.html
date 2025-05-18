@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zgadnij liczbe</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display">
+</head>
+<body>
+<main>
+    <h1 id="question-number"></h1>
+    <h2 id="question-text"></h2>
+    <div id="answers" class="answers"></div>
+    <div id="description-answer" style="display:none;">
+        <form onsubmit="event.preventDefault(); submitTextAnswer();" id="form">
+
+            <input type="number" id="text-answer">
+            <div id="podpowiedz1"></div>
+        </form>
+        <br>
+        <button onclick="submitTextAnswer()">Zatwierdź</button>
+    </div>
+    <div style="margin-top:15px;" id="filtry">
+        <button onclick="useLifeline()" id="lifeline">50/50</button>
+        <button onclick="resignGame()">Zrezygnuj i weź wynik</button>
+    </div>
+    <h2 id="score"></h2>
+
+<script>
+const allQuestions = [
+    { text: "Stolica Polski?", type: "abcd", level: "latwe", a: "Kraków", b: "Warszawa", c: "Gdańsk", d: "Wrocław", correct: "B" },
+    { text: "2 + 2 = ?", type: "abcd", level: "latwe", a: "3", b: "5", c: "4", d: "2", correct: "C" },
+    { text: "Zgadnij liczbę z przedziału 0-10", type: "opisowe", level: "latwe", correct: Math.floor(Math.random()*10+1) },
+
+    { text: "Kolor nieba w słoneczny dzień?", type: "abcd", level: "srednie", a: "zielony", b: "niebieski", c: "szary", d: "czarny", correct: "B" },
+    { text: "Kto napisał 'Pan Tadeusz'?", type: "abcd", level: "srednie", a: "Mickiewicz", b: "Słowacki", c: "Kochanowski", d: "Rej", correct: "A" },
+    { text: "Zgadnij liczbę z przedziału 0-50", type: "opisowe", level: "srednie", correct: Math.floor(Math.random()*50+1) },
+
+    { text: "Zgadnij liczbę z przedziału 0-100", type: "opisowe", level: "trudne", correct: Math.floor(Math.random()*100+1) }
+];
+
+const stawki = [100, 200, 500, 1000, 10000];
+let index = 0;
+let score = 0;
+let lifelineUsed = false;
+let gameQuestions = [];
+
+let secretNumber = null;
+let guessAttempts = 0;
+
+function shuffle(array) {
+    return array.sort(() => Math.random() - 0.5);
+}
+
+function pickQuestions() {
+    const easy = shuffle(allQuestions.filter(q => q.level === "latwe")).slice(0, 2);
+    const medium = shuffle(allQuestions.filter(q => q.level === "srednie")).slice(0, 2);
+    const hard = shuffle(allQuestions.filter(q => q.level === "trudne")).slice(0, 1);
+    gameQuestions = [...easy, ...medium, ...hard];
+}
+
+function loadQuestion() {
+    const q = gameQuestions[index];
+    document.getElementById("question-number").textContent = `Pytanie ${index + 1}`;
+    document.getElementById("question-text").textContent = q.text;
+    document.getElementById("score").textContent = `Wynik: ${score} zł`;
+
+    const answersDiv = document.getElementById("answers");
+    const textDiv = document.getElementById("description-answer");
+    answersDiv.innerHTML = "";
+
+    if (q.type === "abcd") {
+        answersDiv.style.display = "grid";
+        textDiv.style.display = "none";
+        ["A", "B", "C", "D"].forEach(letter => {
+            const btn = document.createElement("button");
+            btn.textContent = `${letter}: ${q[letter.toLowerCase()]}`;
+            btn.onclick = () => checkAnswer(letter);
+            answersDiv.appendChild(btn);
+        });
+    } else {
+        answersDiv.style.display = "none";
+        textDiv.style.display = "block";
+        secretNumber = parseInt(q.correct);
+        guessAttempts = 0;
+        document.getElementById("text-answer").value = "";
+    }
+}
+
+function checkAnswer(letter) {
+    const q = gameQuestions[index];
+  if(q.level === "latwe"){
+    if (letter === q.correct) {
+        score = stawki[index];
+        nextQuestion();
+    } else {
+        score = 0;
+        window.location.href = `przegrana.html?score=${score}`;
+    }
+}
+  if(q.level === "srednie" ||q.level === "trudne" ){
+    if (letter === q.correct) {
+        score = stawki[index];
+        nextQuestion();
+    } else {
+        score = 200;
+        window.location.href = `przegrana.html?score=${score}`;
+    }
+}
+}
+
+function submitTextAnswer() {
+      const q = gameQuestions[index];
+    const input = document.getElementById("text-answer");
+    const userGuess = parseInt(input.value.trim());
+
+    if (isNaN(userGuess)) {
+        alert("Wpisz poprawną liczbę.");
+        return;
+    }
+
+    guessAttempts++;
+if(q.level === "latwe"){
+    if (userGuess === secretNumber) {
+        if (guessAttempts <= 5) {
+            score = stawki[index];
+            clearTextAnswer();
+            document.getElementById("podpowiedz1").innerHTML="";
+            nextQuestion();
+        } else {
+              score = 0;
+            alert(`Zgadłeś, ale w ${guessAttempts} próbach. Limit to 5. Twój wynik: ${score} zł.`);
+            document.getElementById("podpowiedz1").innerHTML="";
+                    window.location.href = `koniec.html?score=${score}`;
+        }
+    } else {
+        document.getElementById("podpowiedz1").innerHTML=(userGuess < secretNumber ? "Za mało!" : "Za dużo!");
+
+    }
+}
+else if(q.level  ==="srednie"){
+      if (userGuess === secretNumber) {
+        if (guessAttempts <= 7) {
+            score = stawki[index];
+            clearTextAnswer();
+            document.getElementById("podpowiedz1").innerHTML="";
+            nextQuestion();
+        } else {
+              score = 200;
+            alert(`Zgadłeś, ale w ${guessAttempts} próbach. Limit to 7. Twój wynik: ${score} zł.`);
+                        document.getElementById("podpowiedz1").innerHTML="";
+                    window.location.href = `koniec.html?score=${score}`;
+        }
+    } else {
+        document.getElementById("podpowiedz1").innerHTML=(userGuess < secretNumber ? "Za mało!" : "Za dużo!");
+
+    }
+}
+else if(q.level ==="trudne"){
+      if (userGuess === secretNumber) {
+        if (guessAttempts <= 9) {
+            score = stawki[index];
+            clearTextAnswer();
+            document.getElementById("podpowiedz1").innerHTML="";
+            nextQuestion();
+        } else {
+              score = 200;
+            alert(`Zgadłeś, ale w ${guessAttempts} próbach. Limit to 9. Twój wynik: ${score} zł.`);
+                        document.getElementById("podpowiedz1").innerHTML="";
+                    window.location.href = `koniec.html?score=${score}`;
+        }
+    } else {
+        document.getElementById("podpowiedz1").innerHTML=(userGuess < secretNumber ? "Za mało!" : "Za dużo!");
+
+    }
+}
+}
+
+
+function clearTextAnswer() {
+    document.getElementById("text-answer").value = "";
+}
+
+function nextQuestion() {
+    index++;
+    if (index >= gameQuestions.length) {
+        window.location.href = `koniec.html?score=${score}`;
+        resetGame();
+    } else {
+        loadQuestion();
+    }
+}
+
+function useLifeline() {
+    const q = gameQuestions[index];
+    if (lifelineUsed || q.type !== "abcd") return;
+    lifelineUsed = true;
+    const wrongAnswers = ["A", "B", "C", "D"].filter(l => l !== q.correct);
+    const toRemove = shuffle(wrongAnswers).slice(0, 2);
+    document.querySelectorAll("#answers button").forEach(btn => {
+        toRemove.forEach(letter => {
+            if (btn.textContent.startsWith(letter)) btn.style.display = "none";
+        });
+    });
+}
+
+function resignGame() {
+            window.location.href = `rezygnacja.html?score=${score}`;
+    resetGame();
+}
+
+function resetGame() {
+    index = 0;
+    score = 0;
+    lifelineUsed = false;
+    pickQuestions();
+    loadQuestion();
+}
+
+pickQuestions();
+loadQuestion();
+</script>
+</main>
+</body>
+</html>

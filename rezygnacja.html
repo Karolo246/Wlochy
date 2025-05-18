@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display">
+</head>
+<body><main>
+    <h1 id="wygrana"></h1>
+    <section id="przycisk">
+    <a href="gra.html">
+        <button>
+            <span>Zagraj ponownie</span>
+        </button>
+    </a>
+        <a href="index.html">
+        <button>
+            <span>Powrót do menu</span>
+        </button>
+    </a>
+    </section>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const score = params.get("score");
+
+        document.getElementById("wygrana").textContent=`Zrezygnowałeś oto twoja wygrana: ${score} zl`;
+    </script>
+    </main>
+</body>
+</html>

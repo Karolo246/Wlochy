@@ -2,7 +2,6 @@ body{
     background-image: url(tlo.png);
     background-position: absolute;
     
-    
 }
 main{
     margin: auto;
@@ -10,20 +9,26 @@ main{
     width: 100vh;
     height: 85vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     border: 8px solid #078310;
     border-radius: 30px;
 }
 
-
+.info{
+    margin: 30px;
+    font-size: large;
+}
 
 h1{
+    text-align: center;
     font-size: 75px;
     font-family: "Playfair Display", serif;
 }
-
+.powrot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 button {
     width: 300px;
     font-size: 20px;

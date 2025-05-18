@@ -2,7 +2,6 @@ body{
     background-image: url(tlo.png);
     background-position: absolute;
     
-    
 }
 main{
     margin: auto;
@@ -16,16 +15,17 @@ main{
     border: 8px solid #078310;
     border-radius: 30px;
 }
-
-
-
 h1{
+    text-align: center;
     font-size: 75px;
     font-family: "Playfair Display", serif;
 }
+#przycisk{
 
+    margin-top: 65px;
+}
 button {
-    width: 300px;
+
     font-size: 20px;
     margin: 30px;
     border: 5px solid #02f939;
